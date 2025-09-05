@@ -168,7 +168,7 @@ with st.form("single_form", clear_on_submit=False):
             st.success(msg, icon="✅")
 
 st.subheader("Batch Prediction (Upload CSV)")
-up = st.file_uploader("Upload CSV (tanpa kolom 'satisfaction')", type=["csv"])
+up = st.file_uploader("Upload CSV", type=["csv"])
 if up is not None:
     df_new = pd.read_csv(up)
     res = predict_df(df_new, threshold=thresh)
