@@ -131,7 +131,7 @@ def predict_df(df_in: pd.DataFrame, threshold: float = 0.5) -> pd.DataFrame:
 
 # ---- UI ----
 st.subheader("Prediction Setting")
-thresh = st.slider("Threshold for class 'Neutral or Dissatisfied", 0.05, 0.95, 0.50, 0.05)
+thresh = st.slider("Threshold for class 'Neutral or Dissatisfied'", 0.05, 0.95, 0.50, 0.05)
 
 st.subheader("Passenger Prediction (for 1 Passenger)")
 with st.form("single_form", clear_on_submit=False):
