@@ -8,15 +8,15 @@ Original file is located at
 """
 
 # Hentikan proses yang nyangkut (abaikan error kalau tidak ada)
-!pkill -f "streamlit run" || true
-!pkill -f cloudflared || true
-!pkill -f "lt --port" || true
+pkill -f "streamlit run" || true
+pkill -f cloudflared || true
+pkill -f "lt --port" || true
 
 # Install paket
-!pip -q install streamlit pandas joblib xgboost scikit-learn
-!wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-!dpkg -i cloudflared-linux-amd64.deb > /dev/null
-!npm -g install localtunnel > /dev/null
+pip -q install streamlit pandas joblib xgboost scikit-learn
+wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+dpkg -i cloudflared-linux-amd64.deb > /dev/null
+npm -g install localtunnel > /dev/null
 
 from pathlib import Path
 import pandas as pd, numpy as np, joblib
