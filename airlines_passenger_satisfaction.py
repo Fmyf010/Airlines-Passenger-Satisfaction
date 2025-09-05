@@ -130,10 +130,10 @@ def predict_df(df_in: pd.DataFrame, threshold: float = 0.5) -> pd.DataFrame:
     return out
 
 # ---- UI ----
-st.subheader("Pengaturan Prediksi")
-thresh = st.slider("Ambang (threshold) untuk kelas 'Neutral or Dissatisfied'", 0.05, 0.95, 0.50, 0.05)
+st.subheader("Prediction Setting")
+thresh = st.slider("Threshold for class 'Neutral or Dissatisfied", 0.05, 0.95, 0.50, 0.05)
 
-st.subheader("Prediksi Satu Penumpang (Form)")
+st.subheader("Passanger Prediction (for 1 Passanger)")
 with st.form("single_form", clear_on_submit=False):
     c1, c2 = st.columns(2)
     with c1:
