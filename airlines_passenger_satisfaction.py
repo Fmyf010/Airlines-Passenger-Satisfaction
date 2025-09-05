@@ -87,7 +87,6 @@ else:
     joblib.dump(clf, PKL_PATH.as_posix())
     print("Disimpan:", PKL_PATH)
 
-%%writefile /content/app.py
 import streamlit as st
 import pandas as pd
 import joblib
