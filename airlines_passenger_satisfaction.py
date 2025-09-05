@@ -9,7 +9,7 @@ from xgboost import XGBClassifier
 from sklearn.metrics import classification_report, roc_auc_score
 
 PKL_PATH = Path("/content/satisfaction_pipeline.pkl")
-DATA_PATH = "/content/Airlines Passanger.csv"
+DATA_PATH = "data/Airlines Passanger.csv"
 TARGET = "satisfaction"
 
 if PKL_PATH.exists():
